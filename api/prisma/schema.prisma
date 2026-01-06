@@ -10,7 +10,7 @@ model Ticket {
   id           String   @id @default(cuid())
   nome         String
   prioridade   Prioridade
-  departamento String
+  departamento Departamento
 
   criadoEm     DateTime @default(now())
   atualizadoEm DateTime @updatedAt
@@ -23,4 +23,12 @@ enum Prioridade {
   MEDIA
   ALTA
   CRITICA
+}
+
+enum Departamento {
+  FINANCEIRO
+  SUPORTE
+  TI
+  COMERCIAL
+  RH
 }
