@@ -5,3 +5,22 @@ generator client {
 datasource db {
   provider = "sqlite"
 }
+
+model Ticket {
+  id           String   @id @default(cuid())
+  nome         String
+  prioridade   Prioridade
+  departamento String
+
+  criadoEm     DateTime @default(now())
+  atualizadoEm DateTime @updatedAt
+
+  @@map("tickets")
+}
+
+enum Prioridade {
+  BAIXA
+  MEDIA
+  ALTA
+  CRITICA
+}
