@@ -16,6 +16,11 @@ model Ticket {
   atualizadoEm DateTime @updatedAt
 
   @@map("tickets")
+
+  @@index([nome])
+  @@index([prioridade])
+  @@index([departamento])
+  @@index([criadoEm])
 }
 
 enum Prioridade {
