@@ -3,7 +3,7 @@ import {
   MethodNotAllowedError,
   NotFoundError,
   ValidationError,
-} from "libs/errors";
+} from "#libs/errors";
 
 async function errorGlobalHandler(error, request, response) {
   if (error instanceof ValidationError) {
@@ -21,11 +21,11 @@ async function errorGlobalHandler(error, request, response) {
   response.status(publicErrorObject.statusCode).json(publicErrorObject);
 }
 
-async function onNoMatchGlobalHandler() {
+async function methodNotAllowedGlobalHandler() {
   return new MethodNotAllowedError();
 }
 
-async function onNotFoundGlobalHandler() {
+async function notFoundGlobalHandler() {
   const publicErrorObject = new NotFoundError({
     message: "Página não encontrada.",
     action: "Procure por uma página disponível.",
@@ -35,8 +35,8 @@ async function onNotFoundGlobalHandler() {
 
 const errorHandlers = {
   errorGlobalHandler,
-  onNoMatchGlobalHandler,
-  onNotFoundGlobalHandler,
+  methodNotAllowedGlobalHandler,
+  notFoundGlobalHandler,
 };
 
 export default errorHandlers;
