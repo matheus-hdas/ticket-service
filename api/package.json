@@ -2,9 +2,12 @@
   "name": "ticket-service-api",
   "version": "1.0.0",
   "main": "src/index.js",
-  "type": "module",
   "author": "matheus-hdas",
   "license": "MIT",
+  "type": "module",
+  "imports": {
+    "#/*": "./src/*"
+  },
   "scripts": {
     "start": "node src/index.js"
   },
