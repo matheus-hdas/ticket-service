@@ -6,13 +6,20 @@
   "license": "MIT",
   "type": "module",
   "imports": {
-    "#/*": "./src/*"
+    "#libs/*": "./src/libs/*.js",
+    "#controllers/*": "./src/controllers/*.js",
+    "#models/*": "./src/models/*.js",
+    "#routes/*": "./src/routes/*.js",
+    "#database/*": "./src/database/*.js"
   },
   "scripts": {
     "start": "node src/index.js"
   },
   "dependencies": {
+    "@libsql/client": "^0.17.0",
+    "@prisma/adapter-libsql": "^7.2.0",
     "@prisma/client": "7.2.0",
+    "dotenv": "17.2.3",
     "express": "5.2.1",
     "zod": "4.3.5"
   },
