@@ -5,12 +5,16 @@ import {
   ValidationError,
 } from "#libs/errors";
 
-async function errorGlobalHandler(error, request, response) {
+function errorGlobalHandler(error, request, response, next) {
   if (error instanceof ValidationError) {
     return response.status(error.statusCode).json(error);
   }
 
   if (error instanceof NotFoundError) {
+    return response.status(error.statusCode).json(error);
+  }
+
+  if (error instanceof MethodNotAllowedError) {
     return response.status(error.statusCode).json(error);
   }
 
@@ -21,11 +25,11 @@ async function errorGlobalHandler(error, request, response) {
   response.status(publicErrorObject.statusCode).json(publicErrorObject);
 }
 
-async function methodNotAllowedGlobalHandler() {
+function methodNotAllowedGlobalHandler() {
   return new MethodNotAllowedError();
 }
 
-async function notFoundGlobalHandler(request, response) {
+function notFoundGlobalHandler(request, response) {
   const publicErrorObject = new NotFoundError({
     message: "Página não encontrada.",
     action: "Procure por uma página disponível.",
