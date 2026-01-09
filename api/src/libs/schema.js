@@ -38,3 +38,5 @@ export const UpdateTicketSchema = z.object({
   prioridade: PrioridadeSchema,
   departamento: DepartamentoSchema,
 });
+
+export const CuidSchema = z.cuid();
