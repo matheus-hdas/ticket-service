@@ -13,7 +13,7 @@
     "#database/*": "./src/database/*.js"
   },
   "scripts": {
-    "start": "npm run db:migrate && node src/index.js",
+    "start": "npm run db:migrate && npm run db:seed && node src/index.js",
     "db:migrate": "prisma migrate deploy && prisma generate",
     "db:seed": "node prisma/seed.js"
   },
