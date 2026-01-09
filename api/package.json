@@ -13,7 +13,8 @@
     "#database/*": "./src/database/*.js"
   },
   "scripts": {
-    "start": "node src/index.js"
+    "start": "npm run db:migrate && node src/index.js",
+    "db:migrate": "prisma migrate deploy && prisma generate"
   },
   "dependencies": {
     "@faker-js/faker": "10.2.0",
