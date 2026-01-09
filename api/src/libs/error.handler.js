@@ -25,7 +25,7 @@ async function methodNotAllowedGlobalHandler() {
   return new MethodNotAllowedError();
 }
 
-async function notFoundGlobalHandler() {
+async function notFoundGlobalHandler(request, response) {
   const publicErrorObject = new NotFoundError({
     message: "Página não encontrada.",
     action: "Procure por uma página disponível.",
