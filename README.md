@@ -23,4 +23,4 @@ A forma mais rápida de subir o sistema completo (Frontend + Backend + Banco de 
 
 ## 🛠️ Comandos Úteis
 
-- `docker-compose down`: Parar todos os serviços.
+- `docker compose down`: Parar todos os serviços.
