@@ -1,0 +1,27 @@
+services:
+  backend:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: tickets-api
+    restart: always
+    environment:
+      - PORT=3333
+      - FRONTEND_URL=http://localhost
+      - DATABASE_URL=file:./db/prod.db
+    ports:
+      - "3333:3333"
+
+  frontend:
+    build:
+      context: ./ui
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_URL=http://localhost:3333/api
+        - VITE_TIMEOUT=5000
+    container_name: tickets-web
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
