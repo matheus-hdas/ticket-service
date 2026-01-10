@@ -32,11 +32,6 @@ export const CreateTicketSchema = z.object({
   departamento: DepartamentoSchema,
 });
 
-export const UpdateTicketSchema = z.object({
-  id: z.cuid(),
-  nome: z.string(),
-  prioridade: PrioridadeSchema,
-  departamento: DepartamentoSchema,
-});
+export const UpdateTicketSchema = CreateTicketSchema;
 
 export const CuidSchema = z.cuid();
