@@ -7,10 +7,13 @@ Sistema de alta performance para gestão de chamados, otimizado para lidar com v
 A forma mais rápida de subir o sistema completo (Frontend + Backend + Banco de Dados) é utilizando o Docker Compose.
 
 1.  **Pré-requisitos:** Docker e Docker Compose instalados.
-2.  **Configuração:** Certifique-se de que o ficheiro `.env` na raiz está preenchido (ou as variáveis no `docker-compose.yaml`).
-3.  **Comando Mágico:**
+2.  **Comando Pra rodar (Nova Engine do Docker Compose):**
     ```bash
     docker compose up -d --build
+    ```
+3.  **Comando Pra rodar (Engine Antiga do Docker Compose):**
+    ```bash
+    docker-compose up -d --build
     ```
 4.  **Acesso:**
     - **Frontend:** [http://localhost](http://localhost)
