@@ -6,7 +6,7 @@
       "#controllers/*": ["src/controllers/*"],
       "#models/*": ["src/models/*"],
       "#routes/*": ["src/routes/*"],
-      "#database/*": ["src/database/*"]
+      "#docs/*": ["src/docs/*"]
     }
   },
   "exclude": ["node_modules"]

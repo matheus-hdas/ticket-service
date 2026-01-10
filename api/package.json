@@ -10,7 +10,7 @@
     "#controllers/*": "./src/controllers/*.js",
     "#models/*": "./src/models/*.js",
     "#routes/*": "./src/routes/*.js",
-    "#database/*": "./src/database/*.js"
+    "#docs/*": "./src/docs/*"
   },
   "scripts": {
     "start": "npm run db:migrate && npm run db:seed && node src/index.js",
@@ -25,6 +25,7 @@
     "dotenv": "17.2.3",
     "express": "5.2.1",
     "seedrandom": "3.0.5",
+    "swagger-ui-express": "5.0.1",
     "zod": "4.3.5"
   },
   "devDependencies": {
