@@ -45,8 +45,8 @@ async function findMany(params) {
     };
   }
 
-  if (prioridade) where.prioridade = prioridade;
-  if (departamento) where.departamento = departamento;
+  if (prioridade) where.prioridade = prioridade.toUpperCase();
+  if (departamento) where.departamento = departamento.toUpperCase();
 
   const orderBy = [{ [sort]: order }, { id: "asc" }];
 
