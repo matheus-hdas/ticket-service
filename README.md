@@ -10,7 +10,7 @@ A forma mais rápida de subir o sistema completo (Frontend + Backend + Banco de 
 2.  **Configuração:** Certifique-se de que o ficheiro `.env` na raiz está preenchido (ou as variáveis no `docker-compose.yaml`).
 3.  **Comando Mágico:**
     ```bash
-    docker-compose up -d --build
+    docker compose up -d --build
     ```
 4.  **Acesso:**
     - **Frontend:** [http://localhost](http://localhost)
