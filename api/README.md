@@ -64,15 +64,19 @@ npm start
 
 ## 🛣️ Documentação da API
 
-### Endpoints de Tickets (`/tickets`)
+### Swagger
+
+A aplicação disponibiliza uma documentação Swagger disponível em `/api-docs`.
+
+### Endpoints de Tickets (`/api/tickets`)
 
 | Método | Rota           | Descrição                                        |
 | ------ | -------------- | ------------------------------------------------ |
-| GET    | `/tickets`     | Lista tickets com suporte a filtros e paginação. |
-| POST   | `/tickets`     | Registra um novo chamado.                        |
-| GET    | `/tickets/:id` | Retorna os detalhes de um chamado específico.    |
-| PUT    | `/tickets/:id` | Atualiza os campos de um chamado existente.      |
-| DELETE | `/tickets/:id` | Remove permanentemente um chamado da base.       |
+| GET    | `/api/tickets`     | Lista tickets com suporte a filtros e paginação. |
+| POST   | `/api/tickets`     | Registra um novo chamado.                        |
+| GET    | `/api/tickets/:id` | Retorna os detalhes de um chamado específico.    |
+| PUT    | `/api/tickets/:id` | Atualiza os campos de um chamado existente.      |
+| DELETE | `/api/tickets/:id` | Remove permanentemente um chamado da base.       |
 
 ### 🔍 Parâmetros de Filtro (Query Params)
 
