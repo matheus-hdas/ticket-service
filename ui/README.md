@@ -4,7 +4,7 @@ Esta é a interface administrativa do sistema de gestão de chamados, desenvolvi
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Framework:** React 18
+- **Framework:** React 19
 - **Build Tool:** Vite
 - **Data Fetching:** React Query (TanStack Query)
 - **Estilização:** Tailwind CSS
