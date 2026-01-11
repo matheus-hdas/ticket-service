@@ -4,6 +4,7 @@ import swaggerUi from "swagger-ui-express";
 
 import errorHandlers from "#libs/error.handler";
 import ticketRouter from "#routes/ticket.router";
+import homeRouter from "#routes/home.router";
 
 import { swaggerDocs } from "#docs/swagger.js";
 
@@ -37,6 +38,7 @@ app.use(
 );
 
 app.use(ticketRouter);
+app.use(homeRouter);
 
 app.use(errorHandlers.notFoundGlobalHandler);
 app.use(errorHandlers.errorGlobalHandler);
